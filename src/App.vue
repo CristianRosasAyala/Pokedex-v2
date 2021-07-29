@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Pokemon-grid />
+    <h1>Menu pokedex</h1>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PokemonGrid from './components/PokemonGrid.vue'
+
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PokemonGrid
   }
 }
 </script>
@@ -23,4 +27,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
