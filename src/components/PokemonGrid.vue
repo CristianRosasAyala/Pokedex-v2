@@ -19,7 +19,7 @@
                 :pokemonProp="pokemon" 
                 v-for="(pokemon, index) in pokemonsComplete" 
                 :key="index" 
-                class="col-2 box shadow-8"
+                class="lg:col-2 sm:col-12"
                 
             />
         </article>
