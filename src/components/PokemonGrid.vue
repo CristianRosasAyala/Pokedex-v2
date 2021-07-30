@@ -1,16 +1,20 @@
 <template>
-  <article class="pokemon-grid">
-      <h1 >template de Pokemon grid</h1>
-      <button @click="mostrarPokemons">show pokemons</button>
-      <button @click="nextList(pokemons.next)">Siguiente</button>
-      <button @click="prevList(pokemons.previous)">Anterior</button>
-      <button @click="mostrarPokemonsIndividuales">show individual pokes</button>
-      <div v-for="(pokemon, index) in pokemonsComplete" :key="index">
-        <Pokemon-card :pokemonProp="pokemon"/>
-      </div>
-      
-      
-  </article>
+    <div>
+        <button @click="mostrarPokemons">show pokemons</button>
+        <button @click="nextList(pokemons.next)">Siguiente</button>
+        <button @click="prevList(pokemons.previous)">Anterior</button>
+        <button @click="mostrarPokemonsIndividuales">show individual pokes</button>
+        <article class="pokemon-grid grid">
+            <Pokemon-card 
+                :pokemonProp="pokemon" 
+                v-for="(pokemon, index) in pokemonsComplete" 
+                :key="index" 
+                class="col-2 box shadow-8"
+                
+            />
+        </article>
+    </div>
+    
 </template>
 
 <script>
@@ -66,10 +70,9 @@ export default {
 
 <style scoped>
     .pokemon-grid{
-        height: 600px;
-        width: 900px;
-        opacity: 50%;
-        background-color: black;
-        margin: auto;
+        background: rgba(0, 0, 0, 0.54);
+        
+        padding-bottom: 30px;
+        margin-top: 30px;
     }
 </style>
