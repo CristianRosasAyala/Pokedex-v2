@@ -1,8 +1,6 @@
 <template>
   <div>
     <Pokemon-grid />
-    <h1>Menu pokedex</h1>
-    
   </div>
 </template>
 
